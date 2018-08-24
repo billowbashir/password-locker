@@ -46,7 +46,17 @@ class TestContact(unittest.TestCase):
         test_credentials.save_credentials()
 
         self.new_credentials.delete_credentials()
-        self.assertEqual(len(Credentials.credentials_list),1)  
+        self.assertEqual(len(Credentials.credentials_list),1)
+    def test_find_credentials_by_platform_name(self):
+        '''
+        test case to test if we can search for credentials in the credentials_list by the platform_name and display
+        '''
+        test_credentials = Credentials("test","testname","987654321")
+        test_credentials.save_credentials()
+
+        found_credential=Credentials.find_credentials_by_platform_name("test")
+        self.assertEqual(found_credential.username,test_credentials.username)
+
 
 
 

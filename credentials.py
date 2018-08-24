@@ -19,4 +19,12 @@ class Credentials:
         '''
         method to delete credentials from credentials_list
         '''
-        Credentials.credentials_list.remove(self)       
+        Credentials.credentials_list.remove(self)
+    @classmethod
+    def find_credentials_by_platform_name(cls,platform_name):
+        '''
+        method to search through the credentials_listby platform name and return the credentials
+        '''
+        for credentials in cls.credentials_list:
+            if credentials.platform_name == platform_name:
+                return credentials
