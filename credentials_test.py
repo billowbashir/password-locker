@@ -1,3 +1,4 @@
+import pyperclip
 import unittest
 from credentials import Credentials
 class TestContact(unittest.TestCase):
@@ -70,6 +71,14 @@ class TestContact(unittest.TestCase):
         test case to test whether we can display a list of all save credentials
         '''
         self.assertEqual(Credentials.display_all_credentials(),Credentials.credentials_list)
+    # def test_copy_password(self):
+    #     '''
+    #     test case to test we can copy the password to machine clipboard
+    #     '''
+    #     self.new_credentials.save_credentials()
+    #     Credentials.copy_password("twitter")
+    #
+    #     self.assertEqual(self.new_credentials.platform_name,pyperclip.paste())
 
 
 

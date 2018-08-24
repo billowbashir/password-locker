@@ -1,3 +1,4 @@
+import pyperclip
 class Credentials:
     '''
     class that generates new instance of the credential details
@@ -42,4 +43,8 @@ class Credentials:
         '''
         method to display list of saved credentials
         '''
-        return cls.credentials_list        
+        return cls.credentials_list
+    # @classmethod
+    # def copy_password(cls,platform_name):
+    #     credentials_found = Credentials.find_credentials_by_platform_name(platform_name)
+    #     pyperclip.copy(credentials_found.password)
