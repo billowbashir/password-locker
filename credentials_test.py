@@ -17,5 +17,11 @@ class TestContact(unittest.TestCase):
         self.assertEqual(self.new_credentials.platform_name,"twitter")
         self.assertEqual(self.new_credentials.username,"billowbashir")
         self.assertEqual(self.new_credentials.password,"123456789")
+    def test_save_credentials(self):
+        '''
+        test case to test if the object is saved into the credentials_list
+        '''
+        self.new_credentials.save_credentials()
+        self.assertEqual(len(Credentials.credentials_list),1)   
 if __name__ =='__main__':
     unittest.main()
