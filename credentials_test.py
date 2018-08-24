@@ -64,7 +64,12 @@ class TestContact(unittest.TestCase):
         test_credentials.save_credentials()
         credentials_exists= Credentials.credentials_exists("test")
 
-        self.assertTrue(credentials_exists) 
+        self.assertTrue(credentials_exists)
+    def test_display_all_credentials(self):
+        '''
+        test case to test whether we can display a list of all save credentials
+        '''
+        self.assertEqual(Credentials.display_all_credentials(),Credentials.credentials_list)
 
 
 

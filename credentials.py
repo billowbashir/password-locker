@@ -37,3 +37,9 @@ class Credentials:
             if credential.platform_name==platform_name:
                 return True
             return False
+    @classmethod
+    def  display_all_credentials(cls):
+        '''
+        method to display list of saved credentials
+        '''
+        return cls.credentials_list        
