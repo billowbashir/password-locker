@@ -25,6 +25,15 @@ class Credentials:
         '''
         method to search through the credentials_listby platform name and return the credentials
         '''
-        for credentials in cls.credentials_list:
-            if credentials.platform_name == platform_name:
-                return credentials
+        for credential in cls.credentials_list:
+            if credential.platform_name == platform_name:
+                return credential
+    @classmethod
+    def credentials_exists(cls,platform_name):
+        '''
+        method that  searches through the credentials_list by platform_name to check whether a credential exist and returns a boolean value
+        '''
+        for credential in cls.credentials_list:
+            if credential.platform_name==platform_name:
+                return True
+            return False

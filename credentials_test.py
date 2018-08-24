@@ -56,6 +56,15 @@ class TestContact(unittest.TestCase):
 
         found_credential=Credentials.find_credentials_by_platform_name("test")
         self.assertEqual(found_credential.username,test_credentials.username)
+    def test_credentials_exists(self):
+        '''
+        test case to test whether we can return a boolean value if we cannot find the credentials we search for
+        '''
+        test_credentials = Credentials("test","testname","987654321")
+        test_credentials.save_credentials()
+        credentials_exists= Credentials.credentials_exists("test")
+
+        self.assertTrue(credentials_exists) 
 
 
 
