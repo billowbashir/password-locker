@@ -4,7 +4,7 @@ class Credentials:
     '''
     credentials_list = []
 
-    def _init_(self,platform_name,username,password):
+    def __init__(self,platform_name,username,password):
         self.platform_name=platform_name
         self.username=username
         self.password=password
