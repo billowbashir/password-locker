@@ -18,6 +18,10 @@ class TestContact(unittest.TestCase):
             self.assertEqual(self.new_user.name,"bashir")
             self.assertEqual(self.new_user.username,"billowbashir")
             self.assertEqual(self.new_user.password,"123456789")
-
+    def test_save_user(self):
+        '''
+        testcase to test if we can save user DETAILS
+        '''
+        self.assertEqual(len(User.user_list),1)
 if __name__ =='__main__':
     unittest.main()
