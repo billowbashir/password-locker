@@ -35,7 +35,7 @@ def main():
     print('\n')
 
     while True:
-        print("Use these short codes :sp -save password, gp - generate a new password, dp - display saved passwords, fp -find a password, ex -exit password locker ")
+        print("Use these short codes :sp save password, gp - generate a new password, dp - display saved passwords, fp -find a password, ex -exit password locker ")
 
         short_code = input().lower()
 
