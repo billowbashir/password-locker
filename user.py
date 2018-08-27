@@ -1,5 +1,6 @@
+import unittest
 class User:
-        def __init__(self,user,password):
-            self.platform_name=platform_name
+        def __init__(self,name,username,password):
+            self.name=name
             self.username=username
             self.password=password
