@@ -22,6 +22,7 @@ class TestContact(unittest.TestCase):
         '''
         testcase to test if we can save user DETAILS
         '''
+        self.new_user.save_user()
         self.assertEqual(len(User.user_list),1)
 if __name__ =='__main__':
     unittest.main()
