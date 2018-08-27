@@ -1,6 +1,9 @@
 #!/usr/bin/env python3.6
 import random
 from credentials import Credentials
+def create_account(name,uname,password):
+    new_user=User (name,uname,password)
+    return new_user
 def create_credential(pname,uname,password):
     new_credential=Credentials(pname,uname,password)
     return new_credential # create new credential and return it
