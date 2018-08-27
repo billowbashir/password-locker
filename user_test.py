@@ -9,7 +9,11 @@ class TestContact(unittest.TestCase):
         set up method that runs before each Test
         '''
         self.new_user = User("bashir","billowbashir","123456789")
-
+    def tearDown(self):
+        '''
+        method that does clean up after each test case has run.
+        '''
+        User.user_list=[]
     def test_init(self):
             self.assertEqual(self.new_user.name,"bashir")
             self.assertEqual(self.new_user.username,"billowbashir")
