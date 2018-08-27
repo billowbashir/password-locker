@@ -23,19 +23,19 @@ def main():
     print("Hello Welcome to password locker. fill in the details below to create an account")
     print("full name....")
     name = input()
-    print("username ....)
+    print("username ....")
     username = input()
     print("password....")
     passcode=input()
     print("confirm password ....")
     confirmpassword = input()
-    if confirmpassword==passcode:
 
-        print(f" account succesfully created welcome {username}. what would you like to do?")
-        print('\n')
+
+    print(f" account succesfully created welcome {username}. what would you like to do?")
+    print('\n')
 
     while True:
-        print("Use these short codes : gp - generate a new password, dp - display saved passwords, fp -find a password, ex -exit password locker ")
+        print("Use these short codes :sp -save password, gp - generate a new password, dp - display saved passwords, fp -find a password, ex -exit password locker ")
 
         short_code = input().lower()
 
@@ -58,6 +58,21 @@ def main():
             sav_credential(create_credential(pname,uname,password)) # create and save new credentials.
             print ('\n')
             print(f"New password for {pname} and account {uname} created")
+            print ('\n')
+        elif short_code=="sp":
+            print("save password")
+            print("-"*10)
+
+            print ("platform name ....")
+            pname = input()
+
+            print("username ...")
+            uname = input()
+            print("password...")
+            password=input()
+            sav_credential(create_credential(pname,uname,password))
+            print ('\n')
+            print(f"password for {pname} and account {uname} saved")
             print ('\n')
 
         elif short_code == 'dp':
