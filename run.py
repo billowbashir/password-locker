@@ -1,8 +1,9 @@
 #!/usr/bin/env python3.6
 import random
 from credentials import Credentials
+from user import User
 def create_account(name,username,passcode):
-    new_user=User (name,uname,password)
+    new_user=User (name,username,passcode)
     return new_user
 def sav_user(user):
     user.save_user()
